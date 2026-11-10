@@ -281,7 +281,7 @@ export default function App() {
 
       {/* CENTER STAGE: Sambutan, Judul Webinar, & Hitung Mundur */}
       <main
-        className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-2 sm:px-4 py-3 w-full my-auto"
+        className="relative z-10 flex-1 flex flex-col justify-center items-center text-center w-full m-0 p-0"
         style={{
           backgroundImage: `url(${backgroundWebinar})`,
           backgroundSize: "cover",
@@ -299,11 +299,6 @@ export default function App() {
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 font-display leading-[1.18] text-balance mb-2">
           {event.title}
         </h1>
-
-        {/* Subjudul */}
-        <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-2xl mx-auto mb-5 sm:mb-7 line-clamp-2 leading-relaxed">
-          {event.subTitle}
-        </p>
 
         {/* Hitung Mundur Real-Time (Fokus Utama Layar) */}
         <div className="w-full">
