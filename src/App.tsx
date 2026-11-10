@@ -13,6 +13,7 @@ import { INITIAL_EVENT_DETAILS, INITIAL_SPEAKERS } from "./data/initialData";
 import { CountdownCard } from "./components/CountdownCard";
 import { SettingsModal } from "./components/SettingsModal";
 import { soundEngine } from "./utils/audio";
+import backgroundWebinar from "./assets/images/BG-COUNTDOWN-WEB.png";
 
 const STORAGE_KEY = "webinar_event_white_blue_v3";
 
@@ -279,7 +280,15 @@ export default function App() {
       </header>
 
       {/* CENTER STAGE: Sambutan, Judul Webinar, & Hitung Mundur */}
-      <main className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-2 sm:px-4 py-3 max-w-4xl mx-auto w-full my-auto">
+      <main
+        className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-2 sm:px-4 py-3 w-full my-auto"
+        style={{
+          backgroundImage: `url(${backgroundWebinar})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         {/* Tulisan Selamat Datang */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-blue-800 mb-3">
           <Sparkles className="w-3.5 h-3.5 text-blue-600 shrink-0" />
